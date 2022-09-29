@@ -1,0 +1,54 @@
+top navbar change the alignment 
+
+change font and font size
+
+for navbar "hack in hub", change the params
+
+register button hover state
+
+whole page scrollbar-x varakoodaadhu
+
+tsPartices
+
+reduce font weight in the second section
+
+change register button params and hover state
+
+Event schedule la alignment and stuff ellame maathu, like alternate pic and steps in every main subtopic step
+
+onscroll behaviour
+
+navbar flex and push the button to the right..
+
+second section ku neriya space vechi paaru.. like it shud take up an entire scroll
+
+back to top button maaathu.. 
+
+sponsors cards maathu
+
+footer la change the logo for location
+
+footer right side la what is that?
+
+footer left la contact cards um maathanum
+
+use another complementary font ffs
+
+navbar hack in hub ku left la enna logo adhu?
+
+
+
+LyncFest main page:
+===================
+
+Events section la what are the logos? change it
+
+Register section la yen 'Regsiter' ku mattum underline?
+
+Register section la the hover state for cards is not right.. 
+
+Schedule ku nadula irukra route line icons are random.. introduce relevance
+
+footer section has been murdered here
+
+smooth scrolling for all the sections when clciked

@@ -1,0 +1,14 @@
+{
+  "name": "lyncfest2022",
+  "version": "1.0.0",
+  "description": "Lyncfest 2022 website files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ma.js",
+  "license": "ISC",
+  "dependencies": {
+    "flipdown": "^0.3.2"
+  }
+}
