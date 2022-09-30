@@ -9,6 +9,7 @@
   "author": "ma.js",
   "license": "ISC",
   "dependencies": {
-    "flipdown": "^0.3.2"
+    "flipdown": "^0.3.2",
+    "particles.js": "^2.0.0"
   }
 }

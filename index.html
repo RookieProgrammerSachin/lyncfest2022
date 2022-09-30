@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/navbar.css">
     <link rel="stylesheet" href="node_modules/flipdown/dist/flipdown.css">
     <script src="node_modules/flipdown/dist/flipdown.js"></script>
+    <script src="./node_modules/particlesjs/particles.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Lync Fest</title>
 </head>
 <body>
+    <div id="particles-js"></div>
+
     <nav class="header-nav">
         <div class="branding">
             <img src="static/images/logo.jpg" alt="">
@@ -18,17 +22,32 @@
         </div>
 
         <div class="nav-buttons">
-            </fa-home><a href="#" class="nav-btn"><i class="fa fa-home"></i>&nbsp;Home</a>
+            <a href="#" class="nav-btn"><i class="fa fa-home"></i>&nbsp;Home</a>
             <a href="#" class="nav-btn"><i class="fa fa-laptop"></i>&nbsp;Hackathon</a>
             <a href="#" class="nav-btn"><i class="fa fa-angellist"></i>&nbsp;Sponsors</a>
             <a href="#" class="nav-btn"><i class="fa fa-user-circle"></i>&nbsp;About</a>
             <a href="#" class="nav-btn"><i class="fa fa-wechat"></i>&nbsp;Contact</a>
             <a href="#" class="nav-btn ghost-btn">Events</a>
         </div>
+
+        <div class="nav-buttons-mobile hidden-nav">
+            <a href="#" class="nav-btn"><i class="fa fa-home"></i>&nbsp;&nbsp;Home</a>
+            <a href="#" class="nav-btn"><i class="fa fa-laptop"></i>&nbsp;&nbsp;Hackathon</a>
+            <a href="#" class="nav-btn"><i class="fa fa-angellist"></i>&nbsp;&nbsp;Sponsors</a>
+            <a href="#" class="nav-btn"><i class="fa fa-user-circle"></i>&nbsp;&nbsp;About</a>
+            <a href="#" class="nav-btn"><i class="fa fa-wechat"></i>&nbsp;&nbsp;Contact</a>
+            <a href="#" class="nav-btn ghost-btn">Events</a>
+        </div>
+
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
     </nav>
 
     <section class="hero">
-        <img src="static/images/logo.jpg" alt="">
+        <img src="static/images/logo.png" alt="">
         <hr>
     </section>
 
@@ -64,6 +83,8 @@
             </div>
         </div>
     </section>
+    
     <script src="app.js"></script>
+    
 </body>
 </html>
