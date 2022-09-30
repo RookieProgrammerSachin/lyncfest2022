@@ -58,6 +58,7 @@
     transition: all 0.3s;
     text-decoration: none;
     padding: .5rem 0.75rem;
+    height: fit-content;
     border-radius: 12px;
     /* transition: font-size 0.3s; */
 }
