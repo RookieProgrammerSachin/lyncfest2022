@@ -2,6 +2,8 @@
     margin: 0px;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
     /* outline: 1px solid red; */
 }
 
@@ -9,6 +11,7 @@ body{
     background: black;
     color: #eeeeee;
     position: relative;
+    scroll-behavior: smooth;
 }
 
 .ghost-btn{
@@ -122,7 +125,7 @@ hr{
     /* padding-bottom: 10%; */
     /* backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%); */
-    background-color: rgba(24, 24, 24, 0.11);
+    background-color: rgba(24, 24, 24, 0.5);
     border-radius: 12px;
     border: 1px solid #0288d1;
     box-shadow: 0 0 10px #0288d1;
@@ -182,4 +185,97 @@ hr{
 .event-card-img{
     width: 90%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.register-events{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 10%;
+    /* outline: 1px solid red; */
+}
+
+.event-reg-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* outline: 1px solid red; */
+    padding: 2%;
+}
+
+.event-reg-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.event-reg-btn img{
+    width: 70%;
+    outline: 1px solid white;
+    border-radius: 12px;
+    border: 1px solid #0288d1;
+    box-shadow: 0 0 10px #0288d1;
+    transition: box-shadow 0.3s ease;
+}
+
+.event-reg-btn:hover img{
+    box-shadow: 0 0 40px #0288d1;
+}
+
+.event-info{
+    position: absolute;
+    text-align: center;
+    width: 70%;
+    top: 100%;
+    /* background:rgba(0, 0, 0, 0.5); */
+    transition: top 0.3s ease;
+    border-top: 1px solid rgba(255, 255, 255, 0.125);
+    padding-top: 3%;
+}
+
+.event-info a{
+    text-decoration: none;
+    color: #eeeeee;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* transition-delay: 0.2s; */
+}
+
+.event-reg-btn:hover .event-info{
+    top: 80%;
+    opacity: 100%;
+}
+
+.event-reg-btn:hover .event-info a{
+    opacity: 100%;
+}
+
+.schedule{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    padding: 10%;
+}
+
+.timeline{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 5px;
+}
+
+.vr{
+    border: none;
+    position: absolute;
+    background-color: #acacac70;
+    height: 100px;
+    /* color: #eeeeee; */
+    width: 5px; 
+    margin: auto;
 }

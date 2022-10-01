@@ -92,6 +92,7 @@
     width: 25px;
     background-color: #eeeeee;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    transition-delay: 0.5s;
 }
 
 .nav-buttons-mobile{
@@ -166,8 +167,18 @@
     }
 
     .about-us{
-        padding: 20% 6%;
+        padding: 40% 6%;
         gap: 10%;
         height: 70vh;
+    }
+
+    .event-card{
+        height: auto;
+        padding: 10% 4%;
+    }
+    
+    .event-reg-btns{
+        flex-direction: column;
+        gap: 30px;
     }
 }
