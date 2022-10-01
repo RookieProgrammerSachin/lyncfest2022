@@ -6,11 +6,12 @@
     padding: 0 1%;
     position: fixed;
     width: 100%;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(2px) saturate(180%);
+    -webkit-backdrop-filter: blur(2px) saturate(180%);
     background-color: rgba(0, 0, 0, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.125);
     z-index: 9999;
+    transition: 0.4s;
 }
 
 .header-nav .branding img{
@@ -34,22 +35,22 @@
 
 .header-nav .nav-buttons{
     display: flex;
-    gap: 0 12px;
+    gap: 0 18px;
     margin-right: 6%;
 }
 
-.header-nav .fa{
+/* .header-nav .fa{
     opacity: 0;
     transform: scale(0);
     transition: opacity 0.3s;
     transform: scale(0.76);
     /* transition: transform 0.3s; */
-}
 
-.header-nav .nav-btn:hover .fa{
+
+/* .header-nav .nav-btn:hover .fa{
     opacity: 100%;
     transform: translateY(1px);
-}
+} */
 
 .nav-btn{
     font-size: 1.2rem;
@@ -57,7 +58,7 @@
     transition: background-color 0.3s;
     transition: all 0.3s;
     text-decoration: none;
-    padding: .5rem 0.75rem;
+    padding: .5rem 1rem;
     border-radius: 12px;
     /* transition: font-size 0.3s; */
 }
@@ -69,9 +70,10 @@
     box-shadow: 0 0 15px #1565c0;
 }
 
-.header-nav .hamburger{
-    position: absolute;
+.hamburger{
+    position: fixed;
     right: 4%;
+    top: 38px;
     /* outline: 1px solid red; */
     display: none;
     flex-direction: column;
@@ -81,6 +83,7 @@
     gap: 5px;
     cursor: pointer;
     z-index: 10000;
+    transition: top 0.3s;
 }
 
 .line{
@@ -88,6 +91,7 @@
     height: 2px;
     width: 25px;
     background-color: #eeeeee;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .nav-buttons-mobile{
@@ -100,14 +104,15 @@
     top: 0px;
     gap: 30px;
     height: 100vh;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    width: 60vw;
+    backdrop-filter: blur(2px) saturate(180%);
+    -webkit-backdrop-filter: blur(2px) saturate(180%);
     background-color: rgba(0, 0, 0, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.125);
     z-index: 9999;
     /* outline: 1px solid red; */
-    padding: 10%;
-    transition: 0.5s;
+    padding: 10% 5%;
+    transition: right 0.5s ease;
 }
 
 .nav-buttons-mobile .nav-btn{
@@ -115,29 +120,54 @@
     text-align: center;
 }
 
-.nav-buttons-mobile .nav-btn .fa{
-    opacity: 1;
-    transform: unset
-}
-
 .hidden-nav{
-    right: -500px;
+    right: -65vw;
 }
 
-@media screen and (max-width: 750px) and (min-width: 350px) {
+.close-1{
+    transform: rotate(45deg) translateY(10px);
+}
+
+.close-2{
+    opacity: 0;
+    transform: translateX(-35px);
+}
+
+.close-3{
+    transform: rotate(-45deg) translateY(-10px);
+}
+
+@keyframes into {
+    
+}
+
+@media screen and (min-width: 350px) and (max-width: 800px) {
     .header-nav .nav-buttons{
         display: none;
     }
 
-    .header-nav .hamburger{
+    .hamburger{
         display: flex;
     }
 
     .hero img{
-        width: 400px;
+        width: 350px;
     }
 
     .event-cards{
         flex-direction: column;
+    }
+
+    .nav-btn:focus{
+        color: white;
+        background-color: #1565c0;
+        transform: scale(1.1);
+        box-shadow: 0 0 15px #1565c0;
+    }
+
+    .about-us{
+        padding: 20% 6%;
+        gap: 10%;
+        height: 70vh;
     }
 }
