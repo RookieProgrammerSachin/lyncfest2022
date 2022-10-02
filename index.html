@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="static/navbar.css">
     <link rel="stylesheet" href="packages/flipdown/dist/flipdown.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="packages/flipdown/dist/flipdown.js"></script>
     <script src="packages/particlesjs/particles.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="packages/dist/js/timeline.min.js"></script>
+    <link href="packages/dist/css/timeline.min.css" rel="stylesheet" />
+
     <title>Lync Fest</title>
 </head>
 <body>
@@ -23,23 +27,23 @@
         </div>
 
         <div class="nav-buttons">
-            <a href="#" class="nav-btn">Home</a>
-            <a href="#" class="nav-btn">Hackathon</a>
-            <a href="#" class="nav-btn">Sponsors</a>
-            <a href="#" class="nav-btn">About</a>
-            <a href="#" class="nav-btn">Contact</a>
-            <a href="#" class="nav-btn ghost-btn">Events</a>
+            <a href="#hero" class="nav-btn">Home</a>
+            <a href="https://ashik-irfan.github.io/lyncfestbuild" class="nav-btn">Hackathon</a>
+            <a href="#sponsors" class="nav-btn">Sponsors</a>
+            <a href="#about-us" class="nav-btn">About</a>
+            <a href="#footer" class="nav-btn">Contact</a>
+            <a href="#events" class="nav-btn ghost-btn">Events</a>
         </div>
     
     </nav>
 
     <div class="nav-buttons-mobile hidden-nav">
-        <a href="#" class="nav-btn">Home</a>
-        <a href="#" class="nav-btn">Hackathon</a>
-        <a href="#" class="nav-btn">Sponsors</a>
-        <a href="#" class="nav-btn">About</a>
-        <a href="#" class="nav-btn">Contact</a>
-        <a href="#" class="nav-btn ghost-btn">Events</a>
+        <a href="#hero" class="nav-btn">Home</a>
+        <a href="#https://ashik-irfan.github.io/lyncfestbuild" class="nav-btn">Hackathon</a>
+        <a href="#sponsors" class="nav-btn">Sponsors</a>
+        <a href="#about-us" class="nav-btn">About</a>
+        <a href="#footer" class="nav-btn">Contact</a>
+        <a href="#events" class="nav-btn ghost-btn">Events</a>
     </div>
 
     <div class="hamburger">
@@ -48,7 +52,7 @@
         <span class="line"></span>
     </div>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <img src="static/images/logo.png" alt="">
     </section>
 
@@ -93,7 +97,7 @@
 
     <hr>
     
-    <section class="register-events">
+    <section class="register-events" id="register-events">
         <h1>Register</h1>
         <h2>Technical Events</h2>
         <div class="event-reg-btns">    
@@ -127,46 +131,99 @@
     <section class="schedule">
         <h1>Schedule</h1>
         <h2>October 20, 2022</h2>
-
         <div class="timeline">
-            <hr class="vr">
-            <div class="schedule-events left">
-                <div class="schedule-event"><h3>Letter box</h3>
-                <span class="time"></span></div>
-                <span class="timeline-circle"></span>
+            <div class="timeline__wrap">
+              <div class="timeline__items">
+                <div class="timeline__item">
+                  <div class="timeline__content" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="schedule-event"><img src="static/images/letterbox.png" class="schedule-event-logo"><h3>Letter box</h3>
+                        <span class="time">10:00AM ~ 12:00PM</span></div>
+                  </div>
+                </div>
+                <div class="timeline__item">
+                  <div class="timeline__content" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="schedule-event"><img src="static/images/lainqui.png" class="schedule-event-logo"><h3>La-Inquizition</h3>
+                        <span class="time">10:00AM ~ 12:00PM</span></div>
+                  </div>
+                </div>
+                <div class="timeline__item">
+                  <div class="timeline__content" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="schedule-event"><img src="static/images/letscliq.png" class="schedule-event-logo"><h3>Let's Cliq</h3>
+                        <span class="time">10:00AM ~ 10:30AM <br><br> 2:00AM ~ 2:30AM</span></div>
+                  </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__content" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="schedule-event"><img src="static/images/loopup.png" class="schedule-event-logo"><h3>Loop Up</h3>
+                            <span class="time">11:00AM ~ 11.45AM <br><br> 1:15PM ~ 2.00PM</span></div>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__content" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="schedule-event"><img src="static/images/legionz.png" class="schedule-event-logo"><h3>Legionz</h3>
+                            <span class="time">1:00PM ~ 2:30PM</span></div>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__content" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="schedule-event"><img src="static/images/link-a-link.png" class="schedule-event-logo"><h3>Link-a-link</h3>
+                            <span class="time">1:30PM ~ 2:30PM</span></div>
+                    </div>
+                </div>
+              </div>
             </div>
-            <div class="schedule-events right">
-                <div class="schedule-event"><h3>La-Inquizition</h3>
-                <span class="time"></span></div>
-                <span class="timeline-circle"></span>
-            </div>
-            <div class="schedule-events left">
-                <div class="schedule-event"><h3>Let's Cliq</h3>
-                <span class="time"></span></div>
-                <span class="timeline-circle"></span>
-            </div>
-            <div class="schedule-events right">
-                <div class="schedule-event"><h3>Loop Up</h3>
-                <span class="time"></span></div>
-                <span class="timeline-circle"></span>
-            </div>
-            <div class="schedule-events left">
-                <div class="schedule-event"><h3>Legionz</h3>
-                <span class="time"></span></div>
-                <span class="timeline-circle"></span>
-            </div>
-            <div class="schedule-events right">
-                <div class="schedule-event"><h3>Link-a-link</h3>
-                <span class="time"></span></div>
-                <span class="timeline-circle"></span>
-            </div>
-        </div>
+          </div>
 
     </section>
 
     <hr>
 
+    <section class="sponsors" id="sponsors">
+        <h1>Our Sponsors</h1>
+        <div class="company-btns">
+            <a href="" class="company-btn" data-aos="zoom-in"><img src="static/images/fresa.png" alt=""></a>
+            <a href="" class="company-btn" data-aos="zoom-in"><img src="static/images/tagros.png" alt=""></a>
+            <a href="" class="company-btn" data-aos="zoom-in"><img src="static/images/sirsub.png" alt=""></a>
+            <a href="" class="company-btn" data-aos="zoom-in"><img src="static/images/hope.png" alt=""></a>
+            <a href="" class="company-btn" data-aos="zoom-in"><img src="static/images/boss.png" alt=""></a>
+        </div>
+    </section>
+
+    <hr>
+
+    <footer>
+        <div class="contact">
+            <h3>Contact</h3>
+            <h4><a target="_blank" href="mailto:lyncfest@sairamit.edu.in"><i class="fa fa-envelope"></i>&nbsp;&nbsp;lyncfest@sairamit.edu.in</a></h4>
+            <br><br>
+            <h4><i class="fa fa-user"></i>&nbsp;&nbsp;Symposium - Srinivasan G</h4>
+            <h4><i class="fa fa-phone"></i>&nbsp;&nbsp;8778433024</h4>
+            <br>
+            <h4><i class="fa fa-user"></i>&nbsp;&nbsp;Hackathon - Vihas S</h4>
+            <h4><i class="fa fa-phone"></i>&nbsp;&nbsp;9840799884</h4>
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d687.3388163631184!2d80.05296262314039!3d12.96061895215311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f51f638ddfbb%3A0xf3aef7ec7c8979ba!2sSri%20Sairam%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1664685158007!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h3>Sri Sai Ram Institute of Technology <br>
+            Sai Leo Nagar, West Tambaram, <br>
+            Chennai - 600044</h2>
+        </div>
+
+        <div class="socials">
+            <h3>Lyncfest:</h3>
+            <a href="https://www.instagram.com/lyncfest22/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+            <br><br>
+            <h3>SIT IT Department:</h3>
+            <a href="https://www.instagram.com/sairamit_it/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.facebook.com/sairamitit/videos/315808929880804/?extid=NS-UNK-UNK-UNK-IOS_GK0T-GK1C" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/posts/sairamit-information-technology_technoholix-activity-6859120428582076416-6hL" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </footer>
+
     <script src="app.js"></script>
     
+    <a href="#hero" class="top">↑</button>
+
 </body>
 </html>

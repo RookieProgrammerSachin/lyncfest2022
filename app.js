@@ -7,6 +7,16 @@ document.querySelector('.hamburger').addEventListener('click', (e)=>{
    })
 })
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -26,6 +36,7 @@ function scrollFunction() {
   }
 } 
 
+
 AOS.init();
 
 document.addEventListener("DOMContentLoaded",()=>{
@@ -40,3 +51,14 @@ particlesJS.load("particles-js", "./static/particlesjs-config.json", function() 
     console.log('callback - particles-js config loaded');
   });
 
+timeline(document.querySelectorAll('.timeline'), {
+  forceVerticalMode: 800,
+  mode: 'vertical',
+  visibleItems: 3,
+  verticalStartPosition: 'left',
+  verticalTrigger: '200px'
+});
+
+if(window.innerWidth <=800){
+  document.querySelectorAll(".timeline__content").forEach((item)=>{item.removeAttribute("data-aos")});
+}

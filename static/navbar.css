@@ -181,4 +181,30 @@
         flex-direction: column;
         gap: 30px;
     }
+
+    .event-info{
+        top: 80%;
+    }
+
+    .event-info a{
+        opacity: 100%;
+    }
+
+    .company-btns{
+        flex-direction: column;
+    }
+
+    .company-btn{
+        width: 60%;
+    }
+
+    footer{
+        align-items: start;
+        flex-direction: column;
+        padding: 7% 9%;
+    }
+
+    .schedule-event-logo{
+        display: none;
+    }
 }
