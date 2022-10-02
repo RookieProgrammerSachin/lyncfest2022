@@ -25,15 +25,19 @@ function scrollFunction() {
     document.querySelector(".header-nav .brand-name").style.fontSize = "1.3rem";
     document.querySelectorAll(".header-nav .nav-buttons .nav-btn").forEach((btn)=>{btn.style.fontSize = "1.2rem"});
     document.querySelector(".hamburger").style.top = "26px";
-    // document.getElementById("logo").style.fontSize = "25px";
   } else {
     document.querySelector(".header-nav img").style.width = "100px";
     document.querySelector(".header-nav .brand-name").style.fontSize = "";
     document.querySelectorAll(".header-nav .nav-buttons .nav-btn").forEach((btn)=>{btn.style.fontSize = ""});
     document.querySelector(".hamburger").style.top = "";
-    // document.getElementById("navbar").style.padding = "80px 10px";
-    // document.getElementById("logo").style.fontSize = "35px";
   }
+
+  if(document.body.scrollTop > 120 || document.documentElement.scrollTop > 120){
+    document.querySelector(".top").classList.add('show-top');
+  } else {
+    document.querySelector(".top").classList.remove('show-top');
+  }
+
 } 
 
 
@@ -59,6 +63,6 @@ timeline(document.querySelectorAll('.timeline'), {
   verticalTrigger: '200px'
 });
 
-if(window.innerWidth <=800){
-  document.querySelectorAll(".timeline__content").forEach((item)=>{item.removeAttribute("data-aos")});
-}
+// if(window.innerWidth < 800){
+//   document.querySelectorAll(".timeline__content").forEach((item)=>{item.setAttribute("data-aos","zoom-up")};
+// }
