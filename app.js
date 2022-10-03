@@ -1,3 +1,24 @@
+document.querySelector(".hero").scrollIntoView();
+
+const overlayGlitch = document.querySelector('.overlay');
+const overlayGlitchEffect = PowerGlitch.glitch(overlayGlitch);
+overlayGlitchEffect.stopGlitch();
+
+setTimeout(() => {
+  overlayGlitchEffect.startGlitch();
+}, 5000);
+
+setTimeout(()=>{
+  overlayGlitchEffect.stopGlitch();
+  overlayGlitch.classList.add("hide-away");
+},7000);
+
+setTimeout(() => {
+  overlayGlitch.remove();
+  document.querySelector(".hero").scrollIntoView();
+  document.body.classList.remove("disable-scroll");
+}, 9000);
+
 document.querySelector('.hamburger').addEventListener('click', (e)=>{
   document.querySelector('.nav-buttons-mobile').classList.toggle('hidden-nav')
   let i=0;
@@ -43,6 +64,9 @@ function scrollFunction() {
 
 AOS.init();
 
+const heroImg = document.querySelector('.hero img')
+const heroImgGlitch = PowerGlitch.glitch(heroImg);
+
 document.addEventListener("DOMContentLoaded",()=>{
   var time = new Date().getTime()/1000 + (86400*18) + 1;
 
@@ -63,6 +87,7 @@ timeline(document.querySelectorAll('.timeline'), {
   verticalTrigger: '200px'
 });
 
-// if(window.innerWidth < 800){
-//   document.querySelectorAll(".timeline__content").forEach((item)=>{item.setAttribute("data-aos","zoom-up")};
-// }
+if(window.innerWidth < 800){
+  const contents = document.querySelectorAll(".timeline__content")
+  contents.forEach((item)=>{item.setAttribute('data-aos','fade-left')})
+}

@@ -29,12 +29,12 @@
     align-items: center;
     gap: 0 10px;
     margin-right: auto;
-    /* outline: 1px solid white; */
 }
 
 .header-nav .branding .brand-name{
     color: #eeeeee;
     transition: font-size 0.4s;
+    font-size: 1.5rem;
 }
 
 .header-nav .nav-buttons{
@@ -63,7 +63,6 @@
     position: fixed;
     right: 4%;
     top: 38px;
-    /* outline: 1px solid red; */
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -81,7 +80,6 @@
     width: 25px;
     background-color: #eeeeee;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    /* transition-delay: 0.3s; */
 }
 
 .nav-buttons-mobile{
@@ -100,7 +98,6 @@
     background-color: rgba(0, 0, 0, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.125);
     z-index: 9999;
-    /* outline: 1px solid red; */
     padding: 10% 5%;
     transition: right 0.3s ease;
     font-family: 'Poppins', sans-serif;
@@ -138,6 +135,10 @@
         display: flex
     }
 
+    h1{
+        font-size: 1.7rem;
+    }
+
     .hamburger{
         display: flex;
     }
@@ -145,6 +146,16 @@
     .hero img{
         width: 350px;
     }
+
+    .countdown-date{
+        padding: 10% 5%;
+        height: unset;
+        gap: 30px;
+    }
+
+    .countdown-date h1{
+        font-size: 1.5rem;
+    }    
 
     .event-cards{
         flex-direction: column;
@@ -158,9 +169,8 @@
     }
 
     .about-us{
-        padding: 40% 6%;
-        gap: 10%;
-        height: 70vh;
+        padding: 10% 8%;
+        gap: 30px;
     }
 
     .event-card{
@@ -190,9 +200,14 @@
     }
 
     footer{
-        align-items: start;
+        align-items: center;
         flex-direction: column;
         padding: 7% 9%;
+    }
+
+    .social-handles{
+        margin-left: 10%;
+        margin-right: auto;
     }
 
     .schedule-event-logo{
