@@ -1,23 +1,49 @@
-document.querySelector(".hero").scrollIntoView();
+document.querySelector(".hero").scrollIntoView({
+  behavior: 'smooth'
+});
 
 const overlayGlitch = document.querySelector('.overlay');
-const overlayGlitchEffect = PowerGlitch.glitch(overlayGlitch);
+const overlayGlitchEffect = PowerGlitch.glitch(overlayGlitch,{
+  "playMode": "always",
+  "createContainers": true,
+  "hideOverflow": false,
+  "timing": {
+    "duration": 800,
+    "easing": "ease-in-out"
+  },
+  "glitchTimeSpan": {
+    "start": 0.5,
+    "end": 0.7
+  },
+  "shake": {
+    "velocity": 15,
+    "amplitudeX": 0.08,
+    "amplitudeY": 0.08
+  },
+  "slice": {
+    "count": 6,
+    "velocity": 9,
+    "minHeight": 0.02,
+    "maxHeight": 0.15,
+    "hueRotate": true
+  }
+});
 overlayGlitchEffect.stopGlitch();
 
 setTimeout(() => {
   overlayGlitchEffect.startGlitch();
-}, 5000);
+}, 4000);
 
 setTimeout(()=>{
   overlayGlitchEffect.stopGlitch();
   overlayGlitch.classList.add("hide-away");
-},7000);
+  document.querySelector(".hero").scrollIntoView();
+},5500);
 
 setTimeout(() => {
   overlayGlitch.remove();
-  document.querySelector(".hero").scrollIntoView();
   document.body.classList.remove("disable-scroll");
-}, 9000);
+}, 6000);
 
 document.querySelector('.hamburger').addEventListener('click', (e)=>{
   document.querySelector('.nav-buttons-mobile').classList.toggle('hidden-nav')
@@ -65,7 +91,32 @@ function scrollFunction() {
 AOS.init();
 
 const heroImg = document.querySelector('.hero img')
-const heroImgGlitch = PowerGlitch.glitch(heroImg);
+const heroImgGlitch = PowerGlitch.glitch(heroImg,{
+  "playMode": "hover",
+  "createContainers": true,
+  "hideOverflow": false,
+  "timing": {
+    "duration": 550,
+    "iterations": 1,
+    "easing": "ease-in-out"
+  },
+  "glitchTimeSpan": {
+    "start": 0,
+    "end": 1
+  },
+  "shake": {
+    "velocity": 15,
+    "amplitudeX": 0.2,
+    "amplitudeY": 0.2
+  },
+  "slice": {
+    "count": 10,
+    "velocity": 15,
+    "minHeight": 0.02,
+    "maxHeight": 0.15,
+    "hueRotate": true
+  }
+});
 
 document.addEventListener("DOMContentLoaded",()=>{
   var time = new Date().getTime()/1000 + (86400*18) + 1;
@@ -73,11 +124,20 @@ document.addEventListener("DOMContentLoaded",()=>{
   var flipdown = new FlipDown(time).start().ifEnded(()=>{
       console.log("mudinchu")
   })
-})
 
-particlesJS.load("particles-js", "./static/particlesjs-config.json", function() {
+  particlesJS.load("particles-js", "./static/particlesjs-config.json", function() {
     console.log('callback - particles-js config loaded');
   });
+
+  document.querySelectorAll(".event-reg-btn").forEach((btn)=>{
+    btn.addEventListener('click',(e)=>{
+      let eventUrl = e.target.getAttribute("href");
+      //console.log(e.target);
+      window.open(eventUrl,"_blank");
+    })
+  })
+})
+
 
 timeline(document.querySelectorAll('.timeline'), {
   forceVerticalMode: 800,
