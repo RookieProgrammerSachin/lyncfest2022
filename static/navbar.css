@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
-@import url('http://fonts.cdnfonts.com/css/blanka');
+@import url('https://fonts.cdnfonts.com/css/blanka');
 
 .header-nav{
     display: flex;
@@ -137,7 +137,7 @@
     transform: rotate(-45deg) translateY(-10px);
 }
 
-@media screen and (min-width: 350px) and (max-width: 800px) or (orientation: landscape){
+@media screen and (min-width: 350px) and (max-width: 800px){
     .header-nav .nav-buttons{
         display: none;
     }

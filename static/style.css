@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
-@import url('http://fonts.cdnfonts.com/css/blanka');
+@import url('https://fonts.cdnfonts.com/css/blanka');
 
 :root{
     /* animation: cubic-bezier(0.6, -0.28, 0.735, 0.045); */
@@ -362,11 +362,6 @@ hr{
     align-items: center;
     gap: 50px;
     padding: 7% 10%;
-    /* outline: 1px solid red; */
-}
-
-.register-events h1{
-    text-decoration: underline;
 }
 
 .event-reg-btns{
@@ -374,7 +369,6 @@ hr{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /* outline: 1px solid red; */
     padding: 2%;
     width: fit-content
 }
@@ -547,7 +541,7 @@ footer a:hover{
 
 .profile img{
     width: 10%;
-    filter: invert(100%);
+    /* filter: invert(100%); */
 }
 
 .profile div{
